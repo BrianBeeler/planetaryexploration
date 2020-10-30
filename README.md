@@ -21,7 +21,7 @@ The average temperature of binary star, 1 planet exoplanets is not statistically
 
 
 Displays:
-![alt text](https://github.com/brianbeeler/planetaryexploration/blob/master/images/plot1.png?raw=true)
+![alt text](./images/plot1.png?raw=true)
 ![alt text](https://github.com/brianbeeler/planetaryexploration/blob/master/images/plot2.png?raw=true)
 ![alt text](https://github.com/brianbeeler/planetaryexploration/blob/master/images/plot3.png?raw=true)
 
