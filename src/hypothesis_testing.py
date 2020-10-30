@@ -1,6 +1,6 @@
 print("\n Yet it remains unclear, are these differences coincidental?")
 
-print("\n Null hypothesis: There is no difference between the temperatures of planet 1 and of planet 2.)
+print("\n Null hypothesis: There is no difference between the temperatures of planet 1 and of planet 2.")
 
 print("\n Sample 1 mean: ", sample1.mean())
 
@@ -11,7 +11,6 @@ print("\n Sample 1 varience: ", sample1.var())
 print("\n Sample 2 varience: ", sample2.var())
 
 print("\n\n A Welch's T-test will be utilized: ")
-
 
 
 def welch_test_statistic(sample_1, sample_2):
@@ -34,41 +33,24 @@ def welch_satterhwaithe_df(sample1, sample2):
 df = welch_satterhwaithe_df(sample1, sample2)
 print("\n\n Degrees of Freedom for Welch's Test: {:2.2f}".format(df))
 
-x = np.linspace(-3, 3, num=250)
+x = np.linspace(-10, 10, num=250)
 
 fig, ax = plt.subplots(1, figsize=(16, 3))
 students = stats.t(df)
 ax.plot(x, students.pdf(x), linewidth=2, label="Degree of Freedom: {:2.2f}".format(df))
 ax.legend()
+ax.axvline(x=test_statistic)
+ax.axvline(x=-test_statistic)
 ax.set_title("Distribution of Welch's Test Statistic Under the Null Hypothesis")
 
 
-import numpy as np
-
-x = np.linspace(-10, 10, num=500)
-
-fig, ax = plt.subplots(1, figsize=(16, 3))
-students = stats.t(df)
-ax.plot(x, students.pdf(x), linewidth=2, label="Degree of Freedom: {:2.2f}".format(df))
-_ = ax.fill_between(x, students.pdf(x), where=(x >= -test_statistic), color="red", alpha=0.25)
-_ = ax.fill_between(x, students.pdf(x), where=(x <= test_statistic), color="red", alpha=0.25)
-
-plt.text(-8.8,0.25,'Welch Test Statistic: -5.12',rotation=0)
-plt.axvline(x=-5.12)
-
-ax.legend()
-ax.set_title("p-value Region")
-
-
 # Get the p value
-
-p_value = 1 - students.cdf(test_statistic)
-print("P-value for sample 1 having a greater temperature that sample 2 {:2.3f}".format(p_value))
-
 results = stats.ttest_ind(sample2, sample1, equal_var=False)
-alpha = 0.05
-if (results[0] > 0) & (results[1]/2 < alpha):
-    print("Reject null hypothesis.")
-else:
-    print("Accept null hypothesis.")
-# reject null hypothesis, mean of Male is greater than mean of Female
+
+print('\n Alpha is : 0.01')
+print('\n P-Value is : ', results.pvalue)
+print('\n\n Thus, the null hypothesis can be rejected very safely.')
+print('\n The number of suns the a plant has, specific to single planet systems')
+print('\n is clearly correlated with higher temperatures. ')
+print("\n Binary sytems with one planet have a statistically higher temperature.")
+
