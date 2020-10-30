@@ -19,12 +19,9 @@ Hypothesis Selection:
 
 The average temperature of binary star, 1 planet exoplanets is not statistically different from 1 planet exoplanets with a single star. 
 
-
-Displays:
 ![alt text](./images/plot1.png?raw=true)
-![alt text](https://github.com/brianbeeler/planetaryexploration/blob/master/images/plot2.png?raw=true)
-![alt text](https://github.com/brianbeeler/planetaryexploration/blob/master/images/plot3.png?raw=true)
-
+![alt text](./images/plot2.png?raw=true)
+![alt text](./images/plot3.png?raw=true)
 
 Conclustions:
 
