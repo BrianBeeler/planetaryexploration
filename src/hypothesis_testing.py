@@ -1,6 +1,14 @@
 print("\n Yet it remains unclear, are these differences coincidental?")
 
-print("\n Null hypothesis: There is no statistical difference between Sample 1 and Sample 2")
+print("\n Null hypothesis: There is no difference between the temperatures of planet 1 and of planet 2.)
+
+print("\n Sample 1 mean: ", sample1.mean())
+
+print("\n Sample 2 mean: ", sample2.mean())
+
+print("\n Sample 1 varience: ", sample1.var())
+
+print("\n Sample 2 varience: ", sample2.var())
 
 print("\n\n A Welch's T-test will be utilized: ")
 
