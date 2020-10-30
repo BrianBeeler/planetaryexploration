@@ -12,7 +12,7 @@ def welch_test_statistic(sample_1, sample_2):
     return numerator / np.sqrt(denominator_sq)
 
 test_statistic = welch_test_statistic(sample1, sample2)
-print("Welch Test Statistic: {:2.2f}".format(test_statistic))    
+print("\n\n Welch Test Statistic: {:2.2f}".format(test_statistic))    
 
 def welch_satterhwaithe_df(sample1, sample2):
     ss1 = len(sample1)
@@ -24,7 +24,7 @@ def welch_satterhwaithe_df(sample1, sample2):
     return df
 
 df = welch_satterhwaithe_df(sample1, sample2)
-print("Degrees of Freedom for Welch's Test: {:2.2f}".format(df))
+print("\n\n Degrees of Freedom for Welch's Test: {:2.2f}".format(df))
 
 x = np.linspace(-3, 3, num=250)
 
@@ -56,3 +56,11 @@ ax.set_title("p-value Region")
 
 p_value = 1 - students.cdf(test_statistic)
 print("P-value for sample 1 having a greater temperature that sample 2 {:2.3f}".format(p_value))
+
+results = stats.ttest_ind(sample2, sample1, equal_var=False)
+alpha = 0.05
+if (results[0] > 0) & (results[1]/2 < alpha):
+    print("Reject null hypothesis.")
+else:
+    print("Accept null hypothesis.")
+# reject null hypothesis, mean of Male is greater than mean of Female

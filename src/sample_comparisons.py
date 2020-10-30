@@ -23,3 +23,6 @@ ax.scatter(sample1, np.repeat(0, len(sample1)) + np.random.normal(0, 0.1, len(sa
 ax.scatter(sample2, np.repeat(1, len(sample2)) + np.random.normal(0, 0.1, len(sample2)), s=45, color='blue')
 ax.set_yticks([0, 1])
 ax.set_yticklabels(["Sample 1", "Sample 2"])
+
+print(sample1.mean())
+print(sample2.mean())
