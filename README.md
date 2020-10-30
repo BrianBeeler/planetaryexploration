@@ -8,15 +8,26 @@ Possible Objectives:
 3. Discover how the size and distance of planets discovered planets changed over time. User a best-fit model to predict the average size and distance in 2030
 
 
-Selection:
-
-Complete a colinearity test between the mass of planets and the temperature of planets, and check if it adheres to theoretical ideals. 
-
-
 Goals: 
 1. Research theoretical models of covarience between the mass and temperature of a planet, select one
 2. Compare the colinearity test to the theoretical model, create a plot showing both the actual data and the theoretical model
 3. Discuss implications of the results, does the data support or contradict the theoretical model; 
    what are the boundaries of the errors?
-
    
+ 
+Hypothesis Selection:
+
+The average temperature of binary star, 1 planet exoplanets is not statistically different from 1 planet exoplanets with a single star. 
+
+
+Displays:
+![alt text](./images/plot1)
+![alt text](./images/plot2)
+![alt text](./images/plot3)
+
+
+Conclustions:
+
+Single sun, single planet exoplanets has a mean temperature of 920.4K Double sun, single planet exoplanets have a mean temperature of 1103.3K
+A Welche's T-Test demonstrated that these two sets ARE statistically different, and that a second sun is correlated with a higher mean planet
+temperature. The likely hood of this happening by chance is extermely small, with a p-value of 5.372188108099737e-07.
